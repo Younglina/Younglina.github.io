@@ -101,7 +101,7 @@ const { docData, categories, tags, docNum, tagNum } = useDocs()
         <div>
           <h3 class="docs-types">分类</h3>
           <a v-for="(num, k) in categories" :key="k" class="docs-categor docs"
-            :href="`/littlear/categories?cat=${k}&type=cat`" target="_blank">
+            :href="`/categories?cat=${k}&type=cat`" target="_blank">
             <span>{{ k }}</span>
             <span class="docs-categor-num" :style="{ backgroundColor: CLORS[Math.floor(Math.random() * 3)] }">
               {{ num }}
@@ -112,7 +112,7 @@ const { docData, categories, tags, docNum, tagNum } = useDocs()
           <h3 class="docs-types">标签</h3>
           <a v-for="t in tags" :key="t" class="docs-tags"
             :style="{ backgroundColor: CLORS[Math.floor(Math.random() * 3)] }"
-            :href="`/littlear/categories?tag=${t}&type=tag`" target="_blank">
+            :href="`/categories?tag=${t}&type=tag`" target="_blank">
             <div>{{ t }}</div>
           </a>
         </div>
