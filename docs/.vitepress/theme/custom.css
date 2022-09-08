@@ -1,0 +1,275 @@
+.VPMenu {
+  max-height: calc(100vh - 3.7rem);
+  overflow-y: auto;
+}
+
+@media (min-width: 960px) {
+  .image-src {
+    max-width: 190px !important;
+  }
+}
+
+.image-src {
+  border-radius: 50%;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+
+.home-top {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  background: url(/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.docs-wrap {
+  display: flex;
+  margin: 20px auto 0;
+  padding: 0 20px;
+  max-width: 1200px;
+}
+
+.docs-list-wrap {
+  flex: auto;
+}
+
+.info-wrapper {
+  max-width: 35vh;
+  margin-left: 20px !important;
+}
+
+.info-person {
+  text-align: center;
+}
+
+.info-name {
+  color: #000;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.info-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-num>div {
+  flex: 0 0 50%;
+}
+
+.info-num h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.info-num h6 {
+  font-size: 12px;
+}
+
+.info-num>div:first-child {
+  border-right: 1px solid #333;
+}
+
+.info-avatar {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.name {
+  color: #fff;
+  font-size: 48px;
+  line-height: 64px;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+.tagline {
+  color: #fff;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+
+.social-links {
+  padding: 20px 10px;
+  text-align: left;
+}
+
+.svg-img {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.docs-types {
+  padding: 20px 0;
+  border-top: 1px solid gainsboro;
+}
+
+.docs.docs-categor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  transition: all 0.5s;
+}
+
+.docs-categor:hover {
+  transform: scale(1.04);
+}
+
+.docs-categor-num {
+  padding: 4px 8px;
+  color: #42b883;
+  font-weight: bolder;
+  font-size: 12px;
+  border-radius: 2px;
+  width: 32px;
+  text-align: center;
+}
+
+.docs-tags {
+  vertical-align: middle;
+  margin: 4px 4px 10px;
+  padding: 4px 8px;
+  color: #fff;
+  font-weight: bolder;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 2px;
+  line-height: 13px;
+  font-size: 13px;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.5s;
+}
+
+.docs-tags:hover {
+  transform: scale(1.04);
+  color: #fff;
+}
+
+.docs {
+  display: block;
+  padding: 16px 20px;
+  margin: 0 auto 16px;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.docs:hover {
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.docs-footer>span {
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+.docs-title {
+  position: relative;
+  width: fit-content;
+  padding: 6px 0;
+  margin-bottom: 6px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.docs-title::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--vp-home-hero-name-color);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: 0.3s ease-in-out;
+}
+
+.docs-title:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.docs-info {
+  color: #7f7f7f;
+  margin-right: 10px;
+}
+
+.docs-tag:hover {
+  color: var(--vp-home-hero-name-color) !important;
+}
+
+#heat-map {
+  margin: 40px auto 20px;
+  height: 100px;
+}
+
+.illustration {
+  display: none !important;
+}
+
+.lcdata {
+  text-align: right;
+  padding-right: 20px;
+  font-size: 12px;
+}
+
+a[href="/littlear/categories.html"] {
+  display: none !important;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  color: gainsboro;
+}
+
+/* 
+ .heat-map {
+  margin: 40px 0 !important;
+  width: 100%;
+} 
+
+.vch__container {
+  transform: scale(0.8);
+  font-size: 12px;
+  padding-top: 30px;
+}
+
+.vch__legend {
+  display: none;
+}
+
+[id^="tippy-"] {
+  background-color: rgba(239, 241, 246, .85);
+  color: rgb(38, 38, 38);
+  padding: 4px;
+  border-radius: 2px;
+  font-size: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif;
+}
+
+.live2d-canvas {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+} */
