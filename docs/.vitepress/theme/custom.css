@@ -233,7 +233,7 @@
   font-size: 12px;
 }
 
-a[href="/littlear/categories.html"] {
+a[href="/categories.html"] {
   display: none !important;
 }
 

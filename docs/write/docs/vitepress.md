@@ -79,7 +79,7 @@ module.exports = {
   title: "littlear", //网站标题
   description: "vitepress blog", //网站描述,会生成<meta>便签
   author: "Younglina", //作者
-  base: '/littlear/', //根目录 如果您计划将站点部署到https://foo.github.io/bar/，那么您应该将base设置为“/bar/”
+  base: '/', //根目录 如果您计划将站点部署到https://foo.github.io/bar/，那么您应该将base设置为“/bar/”
   markdown: {
     lineNumbers: true, //显示代码行数
   },

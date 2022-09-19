@@ -58,7 +58,7 @@ function changePage(p) {
           <span>
             🔗
             <a v-for="tag in item.tags" class="docs-info docs-tag" :style="{color:tag===props.filter?'var(--vp-home-hero-name-color)':'#7f7f7f'}" :key="tag"
-              :href="`/littlear/categories?tag=${tag}&type=tag`" target="_blank">
+              :href="`/categories?tag=${tag}&type=tag`" target="_blank">
               <span >{{ tag }}</span>
             </a>
           </span>

@@ -20,7 +20,7 @@ function readAll(parentPath) {
         re.lastIndex = 0
         if (s) {
           let docs = yaml.load(s[1])
-          docs.link = '/littlear'+tempPath.slice(4, -3)
+          docs.link = tempPath.slice(4, -3)
           out.push(docs);
         }
       }
