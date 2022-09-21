@@ -241,7 +241,15 @@ button:disabled {
   cursor: not-allowed;
   color: gainsboro;
 }
-
+#gitalk-container{
+  padding: 10px 40px;
+}
+#gitalk-page-container{
+  padding: 10px 0px;
+}
+.VPHome {
+  padding-bottom: 0 !important;
+}
 /* 
  .heat-map {
   margin: 40px 0 !important;
