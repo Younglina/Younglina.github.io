@@ -41,9 +41,9 @@ onMounted(() => {
         <span class="page-info" v-for="item in frontmatter.tags" :key="item">{{ item }}</span>
       </span>
     </template>
-    <template #doc-after>
+    <!-- <template #doc-after>
       <div id="doc-after"></div>
-    </template>
+    </template> -->
     <!-- <template #doc-footer-before>
       <span>doc-footer-before</span>
     </template>

@@ -13,6 +13,8 @@ module.exports = [
             { text: "学习vue3-nuxt", link: "/write/docs/vue3-nuxt", },
             { text: "自定义一个vitepress的blog", link: "/write/docs/vitepress", },
             { text: "通过gitbash配置快捷指令", link: "/write/docs/alias", },
+            { text: "获取vitepress所有文章数据", link: "/write/docs/vitepress-data", },
+            { text: "vitepress配置评论", link: "/write/docs/vitepress-gitalk", },
         ],
     },
     {

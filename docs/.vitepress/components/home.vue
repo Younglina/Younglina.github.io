@@ -122,7 +122,7 @@ if(typeof window !==undefined){
           <a v-for="(num, k) in categories" :key="k" class="docs-categor docs"
             :href="`/categories?cat=${k}&type=cat`" target="_blank">
             <span>{{ k }}</span>
-            <span class="docs-categor-num" :style="{ backgroundColor: CLORS[Math.floor(Math.random() * 3)] }">
+            <span class="docs-categor-num" :style="{ backgroundColor: CLORS[Math.floor(Math.random() * 4)] }">
               {{ num }}
             </span>
           </a>
@@ -130,7 +130,7 @@ if(typeof window !==undefined){
         <div>
           <h3 class="docs-types">标签</h3>
           <a v-for="t in tags" :key="t" class="docs-tags"
-            :style="{ backgroundColor: CLORS[Math.floor(Math.random() * 3)] }"
+            :style="{ backgroundColor: CLORS[Math.floor(Math.random() * 4)] }"
             :href="`/categories?tag=${t}&type=tag`" target="_blank">
             <div>{{ t }}</div>
           </a>

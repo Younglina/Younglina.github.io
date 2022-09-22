@@ -4,7 +4,6 @@ import { useDocs } from './useDocs.js'
 
 const props = defineProps(['filter', 'type'])
 
-const CLORS = ['#FFB3B3', '#FFDBA4', '#FFE9AE', '#C1EFFF']
 const { categories, docData } = useDocs()
 const totalData = ref([])
 let curPage = ref(1),
