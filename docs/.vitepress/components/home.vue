@@ -60,7 +60,7 @@ const { docData, categories, tags, docNum, tagNum } = useDocs()
 // fetch('https://api.03c3.cn/zb/text.php').then(res=>{
 //   res.text().then(res=>console.log(res))
 // })
-if(typeof window !==undefined){
+if (typeof window !== undefined) {
   var s_div = document.createElement('div');   // 创建节点
   s_div.setAttribute("id", "gitalk-container");   // 设置属性
   document.body.appendChild(s_div);   // 添加节点
@@ -71,7 +71,7 @@ if(typeof window !==undefined){
     clientID: '91a579be5a403288bdb7',
     admin: ['Younglina'],
     labels: ['Gitalk'],
-    proxy: "https://vercel.younglina.top/github_access_token",
+    proxy: "https://cors-server-ecru.vercel.app/github_access_token",
     createIssueManually: true,
     clientSecret: '6af31ca2f5dfc7bc7feed23a8642d23993dcc9c3',
   })
@@ -119,8 +119,8 @@ if(typeof window !==undefined){
         </div>
         <div>
           <h3 class="docs-types">分类</h3>
-          <a v-for="(num, k) in categories" :key="k" class="docs-categor docs"
-            :href="`/categories?cat=${k}&type=cat`" target="_blank">
+          <a v-for="(num, k) in categories" :key="k" class="docs-categor docs" :href="`/categories?cat=${k}&type=cat`"
+            target="_blank">
             <span>{{ k }}</span>
             <span class="docs-categor-num" :style="{ backgroundColor: CLORS[Math.floor(Math.random() * 4)] }">
               {{ num }}
@@ -130,8 +130,8 @@ if(typeof window !==undefined){
         <div>
           <h3 class="docs-types">标签</h3>
           <a v-for="t in tags" :key="t" class="docs-tags"
-            :style="{ backgroundColor: CLORS[Math.floor(Math.random() * 4)] }"
-            :href="`/categories?tag=${t}&type=tag`" target="_blank">
+            :style="{ backgroundColor: CLORS[Math.floor(Math.random() * 4)] }" :href="`/categories?tag=${t}&type=tag`"
+            target="_blank">
             <div>{{ t }}</div>
           </a>
         </div>
@@ -146,4 +146,5 @@ if(typeof window !==undefined){
 </template>
 
 <style>
+
 </style>

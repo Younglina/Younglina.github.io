@@ -95,7 +95,7 @@ onMounted(() => {
 
 在gitalk的配置中加入下面一句即可  
 ```
-proxy: "https://vercel.younglina.top/github_access_token",
+proxy: "https://cors-server-ecru.vercel.app/github_access_token",
 ```
 
 成功以后的[效果](https://younglina.top/)
