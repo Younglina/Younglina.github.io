@@ -58,6 +58,7 @@ module.exports = {
                     title: "vitepress配置评论",
                     link: "/write/docs/vitepress-gitalk", 
                 },
+                { text: "图片懒加载", title: "图片懒加载", link: "/write/docs/lazyload-img", },
             ],
         },
     ],
