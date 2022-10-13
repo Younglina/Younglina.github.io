@@ -59,6 +59,7 @@ module.exports = {
                     link: "/write/docs/vitepress-gitalk", 
                 },
                 { text: "图片懒加载", title: "图片懒加载", link: "/write/docs/lazyload-img", },
+                { text: "LRU缓存", title: "LRU缓存", link: "/write/docs/LRUCache", },
             ],
         },
     ],

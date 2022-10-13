@@ -16,6 +16,7 @@ module.exports = [
             { text: "获取vitepress所有文章数据", link: "/write/docs/vitepress-data", },
             { text: "vitepress配置评论", link: "/write/docs/vitepress-gitalk", },
             { text: "图片懒加载", link: "/write/docs/lazyload-img", },
+            { text: "LRU缓存", link: "/write/docs/LRUCache", },
         ],
     },
     {
