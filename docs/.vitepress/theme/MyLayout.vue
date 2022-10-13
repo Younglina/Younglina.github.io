@@ -11,7 +11,7 @@ const { Layout } = DefaultTheme
 const { frontmatter } = useData()
 
 onMounted(() => {
-  if(typeof window !==undefined){
+  if (typeof window !== undefined) {
     var s_div = document.createElement('div');   // 创建节点
     s_div.setAttribute("id", "gitalk-page-container");   // 设置属性
     document.querySelector('.content-container').appendChild(s_div);   // 添加节点
@@ -22,7 +22,7 @@ onMounted(() => {
       clientID: '91a579be5a403288bdb7',
       admin: ['Younglina'],
       labels: ['Gitalk'],
-      proxy: "https://vercel.younglina.top/github_access_token",
+      proxy: "https://cors-server-ecru.vercel.app/github_access_token",
       createIssueManually: true,
       clientSecret: '6af31ca2f5dfc7bc7feed23a8642d23993dcc9c3',
     })
@@ -69,9 +69,9 @@ onMounted(() => {
 </template>
 
 <style>
-  .page-info{
-    font-size: 13px;
-    color: #7f7f7f;
-    margin-right: 10px;
-  }
+.page-info {
+  font-size: 13px;
+  color: #7f7f7f;
+  margin-right: 10px;
+}
 </style>
