@@ -60,6 +60,7 @@ module.exports = {
                 },
                 { text: "图片懒加载", title: "图片懒加载", link: "/write/docs/lazyload-img", },
                 { text: "LRU缓存", title: "LRU缓存", link: "/write/docs/LRUCache", },
+                { text: "vue.js设计与实现笔录", title: "vue.js设计与实现笔录", link: "/write/docs/vue3-book", },
             ],
         },
     ],
