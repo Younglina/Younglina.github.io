@@ -20,12 +20,10 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
-    "css-doodle": "^0.28.2",
     "gitalk": "^1.8.0",
     "js-yaml": "^4.1.0",
     "ml-heatmap": "^0.0.6",
-    "pixi-live2d-display": "^0.4.0-beta.2",
-    "pixi.js": "^6.5.1",
+    "moment": "^2.29.4",
     "vue3-calendar-heatmap": "^2.0.0"
   }
 }

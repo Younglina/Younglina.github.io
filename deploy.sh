@@ -9,9 +9,9 @@ npm run ac
 # 生成静态文件
 npm run build
 
-git add ./docs/.vitepress/components/lcData.json
-git commit -m "get ac record"
-git push
+# git add ./docs/.vitepress/components/lcData.json
+# git commit -m "get ac record"
+# git push
 # 进入生成的文件夹
 cd docs/.vitepress/dist
 

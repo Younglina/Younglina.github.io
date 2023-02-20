@@ -60,7 +60,10 @@ const { docData, categories, tags, docNum, tagNum } = useDocs()
 // fetch('https://api.03c3.cn/zb/text.php').then(res=>{
 //   res.text().then(res=>console.log(res))
 // })
+onMounted(()=>{
 if (typeof window !== undefined) {
+  console.log(window,'window')
+  console.log(document,'document')
   var s_div = document.createElement('div');   // 创建节点
   s_div.setAttribute("id", "gitalk-container");   // 设置属性
   document.body.appendChild(s_div);   // 添加节点
@@ -77,6 +80,8 @@ if (typeof window !== undefined) {
   })
   gitment.render('gitalk-container')
 }
+
+})
 </script>
 
 <template>
