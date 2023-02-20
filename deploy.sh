@@ -4,14 +4,14 @@
 set -e
 
 # 获取leetcode
-# npm run ac_record
+npm run ac
 
-# git add ./docs/.vitepress/components/lcData.json
-# git commit -m "get ac record"
-# git push
+git add ./docs/.vitepress/components/lcData.json
+git commit -m "get ac record"
+git push
 
 # 生成静态文件
-# npm run build
+npm run build
 
 # 进入生成的文件夹
 cd docs/.vitepress/dist
