@@ -1,7 +1,3 @@
-.VPMenu {
-  max-height: calc(100vh - 3.7rem);
-  overflow-y: auto;
-}
 
 @media (min-width: 960px) {
   .image-src {
@@ -245,7 +241,7 @@ button:disabled {
   padding: 10px 40px;
 }
 #gitalk-page-container{
-  padding: 10px 0px;
+  padding: 10px 40px;
 }
 .VPHome {
   padding-bottom: 0 !important;
