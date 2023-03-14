@@ -10,7 +10,6 @@ module.exports = [
             { text: "vuepress本地复制代码插件", link: "/write/docs/vuepressPlugin" },
             { text: "vuepress配置github pages域名访问", link: "/write/docs/githubPages" },
             { text: "动态规划：为什么是dp[n-2]+dp[n-1]", link: "/write/docs/dp-step", },
-            { text: "学习vue3-nuxt", link: "/write/docs/vue3-nuxt", },
             { text: "自定义一个vitepress的blog", link: "/write/docs/vitepress", },
             { text: "通过gitbash配置快捷指令", link: "/write/docs/alias", },
             { text: "获取vitepress所有文章数据", link: "/write/docs/vitepress-data", },
@@ -19,6 +18,7 @@ module.exports = [
             { text: "LRU缓存", link: "/write/docs/LRUCache", },
             { text: "vue.js设计与实现笔录", link: "/write/docs/vue3-book", },
             { text: "腾讯云-对象存储", link: "/write/docs/tegnxuncos", },
+            { text: "vue3开发景德镇当地特色浏览网站", link: "/write/docs/vue3-jdz", },
         ],
     },
     {
