@@ -58,6 +58,7 @@ module.exports = {
                 // { text: "vue.js设计与实现笔录", title: "vue.js设计与实现笔录", link: "/write/docs/vue3-book", },
                 { text: "腾讯云-对象存储", title: "腾讯云-对象存储", link: "/write/docs/tengxuncos", },
                 { text: "vue3开发景德镇当地特色浏览网站", title: "vue3开发景德镇当地特色浏览网站", link: "/write/docs/vue3-jdz", },
+                { text: "vue3自定义右键菜单组件", title: "vue3自定义右键菜单组件", link: "/write/docs/vue3ContextMenu", },
             ],
         },
     ],
