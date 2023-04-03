@@ -1,0 +1,23 @@
+{
+  "hash": "2e79239b",
+  "browserHash": "0217c444",
+  "optimized": {
+    "vue": {
+      "src": "../../../../node_modules/.pnpm/vue@3.2.47/node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "3ecf4179",
+      "needsInterop": false
+    },
+    "gitalk": {
+      "src": "../../../../node_modules/.pnpm/gitalk@1.8.0/node_modules/gitalk/dist/gitalk.js",
+      "file": "gitalk.js",
+      "fileHash": "1d3b5aeb",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-RSJERJUL": {
+      "file": "chunk-RSJERJUL.js"
+    }
+  }
+}

@@ -50,18 +50,30 @@ module.exports = {
                     title: "通过gitbash配置快捷指令",
                     link: "/write/docs/alias",
                 },
-                {   text: "获取vitepress所有文章数据", 
+                {
+                    text: "获取vitepress所有文章数据",
                     title: "获取vitepress所有文章数据",
-                    link: "/write/docs/vitepress-data", 
+                    link: "/write/docs/vitepress-data",
                 },
-                {   text: "vitepress配置评论", 
+                {
+                    text: "vitepress配置评论",
                     title: "vitepress配置评论",
-                    link: "/write/docs/vitepress-gitalk", 
+                    link: "/write/docs/vitepress-gitalk",
                 },
                 { text: "图片懒加载", title: "图片懒加载", link: "/write/docs/lazyload-img", },
                 { text: "LRU缓存", title: "LRU缓存", link: "/write/docs/LRUCache", },
                 // { text: "vue.js设计与实现笔录", title: "vue.js设计与实现笔录", link: "/write/docs/vue3-book", },
                 { text: "腾讯云-对象存储", title: "腾讯云-对象存储", link: "/write/docs/tengxuncos", },
+            ],
+        },
+    ],
+    "/write/nodejs": [
+        {
+            title: "nodejs",
+            link: "/",
+            collapsable: false,
+            items: [
+                { title: "fs模块", text: "fs模块", link: "/write/nodejs/fs" },
             ],
         },
     ],
@@ -104,6 +116,16 @@ module.exports = {
                     text: "mpvue仿网易云音乐",
                     title: "mpvue仿网易云音乐",
                     link: "/write/project/wx-cloud-music",
+                },
+                {
+                    text: "vue3开发景德镇当地特色浏览网站",
+                    title: "vue3开发景德镇当地特色浏览网站",
+                    link: "/write/project/china",
+                },
+                {
+                    text: "vue3仿YesPlay",
+                    title: "vue3仿YesPlay",
+                    link: "/write/project/vue3-yesplay",
                 },
                 {
                     text: "看看吃啥",

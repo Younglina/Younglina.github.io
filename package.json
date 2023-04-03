@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "vitepress dev docs",
+    "dev": "node lc/read.js && vitepress dev docs",
     "build": "node lc/read.js && node lc/getAcRecord.mjs && vitepress build docs",
     "ac": "node lc/getAcRecord.mjs",
     "rd": "node lc/read.js",

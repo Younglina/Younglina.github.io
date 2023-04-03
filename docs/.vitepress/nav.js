@@ -10,7 +10,6 @@ module.exports = [
             { text: "vuepress本地复制代码插件", link: "/write/docs/vuepressPlugin" },
             { text: "vuepress配置github pages域名访问", link: "/write/docs/githubPages" },
             { text: "动态规划：为什么是dp[n-2]+dp[n-1]", link: "/write/docs/dp-step", },
-            { text: "学习vue3-nuxt", link: "/write/docs/vue3-nuxt", },
             { text: "自定义一个vitepress的blog", link: "/write/docs/vitepress", },
             { text: "通过gitbash配置快捷指令", link: "/write/docs/alias", },
             { text: "获取vitepress所有文章数据", link: "/write/docs/vitepress-data", },
@@ -22,15 +21,21 @@ module.exports = [
         ],
     },
     {
-        text: "源码阅读",
+        text: "NodeJS",
         items: [
-            {
-                text: "ElemetUI make new",
-                link: "/write/sourceRead/element-make-new",
-            },
-            { text: "包管理器only-allow", link: "/write/sourceRead/only-allow" },
+            { text: "fs模块", link: "/write/nodejs/fs" },
         ],
     },
+    // {
+    //     text: "源码阅读",
+    //     items: [
+    //         {
+    //             text: "ElemetUI make new",
+    //             link: "/write/sourceRead/element-make-new",
+    //         },
+    //         { text: "包管理器only-allow", link: "/write/sourceRead/only-allow" },
+    //     ],
+    // },
     {
         text: "项目",
         items: [
@@ -47,36 +52,44 @@ module.exports = [
                 link: "/write/project/wx-cloud-music",
             },
             {
+                text: "vue3开发景德镇当地特色浏览网站",
+                link: "/write/project/china",
+            },
+            {
+                text: "vue3仿YesPlay",
+                link: "/write/project/vue3-yesplay",
+            },
+            {
                 text: "看看吃啥",
                 link: "/write/project/eat",
             },
         ],
     },
-    {
-        text: "算法模版",
-        items: [
-            {
-                text: "数据有序，相同元素保留 `k` 位模版",
-                link: "/write/algorithms-temp/remove-duplicates",
-            },
-            {
-                text: "滑动窗口模板",
-                link: "/write/algorithms-temp/sliding-window",
-            },
-            {
-                text: "从一个字符串中找另一个字符串模版",
-                link: "/write/algorithms-temp/find-str-in-other",
-            },
-            {
-                text: "树的前中后序遍历",
-                link: "/write/algorithms-temp/traverse-tree",
-            },
-            {
-                text: "蓝红二分模板",
-                link: "/write/algorithms-temp/bluered",
-            }
-        ]
-    },
+    // {
+    //     text: "算法模版",
+    //     items: [
+    //         {
+    //             text: "数据有序，相同元素保留 `k` 位模版",
+    //             link: "/write/algorithms-temp/remove-duplicates",
+    //         },
+    //         {
+    //             text: "滑动窗口模板",
+    //             link: "/write/algorithms-temp/sliding-window",
+    //         },
+    //         {
+    //             text: "从一个字符串中找另一个字符串模版",
+    //             link: "/write/algorithms-temp/find-str-in-other",
+    //         },
+    //         {
+    //             text: "树的前中后序遍历",
+    //             link: "/write/algorithms-temp/traverse-tree",
+    //         },
+    //         {
+    //             text: "蓝红二分模板",
+    //             link: "/write/algorithms-temp/bluered",
+    //         }
+    //     ]
+    // },
     {
         text: "算法学习",
         items: [
