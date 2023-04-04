@@ -70,10 +70,9 @@ module.exports = {
     "/write/nodejs": [
         {
             title: "nodejs",
-            link: "/",
             collapsable: false,
             items: [
-                { title: "fs模块", text: "fs模块", link: "/write/nodejs/fs" },
+                { title: "模块", text: "模块", link: "/write/nodejs/modules" },
             ],
         },
     ],

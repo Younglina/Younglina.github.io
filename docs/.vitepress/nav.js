@@ -23,7 +23,7 @@ module.exports = [
     {
         text: "NodeJS",
         items: [
-            { text: "fs模块", link: "/write/nodejs/fs" },
+            { text: "fs模块", link: "/write/nodejs/modules" },
         ],
     },
     // {
