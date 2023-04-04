@@ -11,6 +11,7 @@ module.exports = {
   },
   lastUpdated: true, //以git提交的时间为更新时间
   themeConfig: {
+    outline: [1,6],
     nav: wyNav, //导航栏配置
     sidebar: wySidebar, //侧边栏配置
     author: 'Younglina',

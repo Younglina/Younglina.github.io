@@ -101,7 +101,6 @@ if (typeof window !== undefined) {
         </div>
       </div>
     </div>
-
   </div>
 </template>
 

@@ -36,11 +36,6 @@ module.exports = {
                     link: "/write/docs/dp-step",
                 },
                 {
-                    text: "学习vue3-nuxt",
-                    title: "学习vue3-nuxt",
-                    link: "/write/docs/vue3-nuxt",
-                },
-                {
                     text: "自定义一个vitepress的blog",
                     title: "自定义一个vitepress的blog",
                     link: "/write/docs/vitepress",
@@ -64,6 +59,8 @@ module.exports = {
                 { text: "LRU缓存", title: "LRU缓存", link: "/write/docs/LRUCache", },
                 // { text: "vue.js设计与实现笔录", title: "vue.js设计与实现笔录", link: "/write/docs/vue3-book", },
                 { text: "腾讯云-对象存储", title: "腾讯云-对象存储", link: "/write/docs/tengxuncos", },
+                { text: "vue3开发景德镇当地特色浏览网站", title: "vue3开发景德镇当地特色浏览网站", link: "/write/docs/vue3-jdz", },
+                { text: "vue3自定义右键菜单组件", title: "vue3自定义右键菜单组件", link: "/write/docs/vue3ContextMenu", },
             ],
         },
     ],

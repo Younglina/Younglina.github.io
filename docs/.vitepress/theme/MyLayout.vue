@@ -14,7 +14,7 @@ onMounted(() => {
   if (typeof window !== undefined) {
     var s_div = document.createElement('div');   // 创建节点
     s_div.setAttribute("id", "gitalk-page-container");   // 设置属性
-    document.querySelector('.content-container').appendChild(s_div);   // 添加节点
+    document.querySelector('.VPContent').appendChild(s_div);   // 添加节点
     var gitment = new Gitalk({
       id: location.pathname, // 可选。默认为 location.href
       owner: 'Younglina',
@@ -41,30 +41,6 @@ onMounted(() => {
         <span class="page-info" v-for="item in frontmatter.tags" :key="item">{{ item }}</span>
       </span>
     </template>
-    <!-- <template #doc-after>
-      <div id="doc-after"></div>
-    </template> -->
-    <!-- <template #doc-footer-before>
-      <span>doc-footer-before</span>
-    </template>
-    <template #aside-top>
-      <span>aside-top</span>
-    </template>
-    <template #aside-bottom>
-      <span>aside-bottom</span>
-    </template>
-    <template #aside-outline-before>
-      <span>aside-outline-before</span>
-    </template>
-    <template #aside-outline-after>
-      <span>aside-outline-after</span>
-    </template>
-    <template #aside-ads-before>
-      <span>aside-ads-before</span>
-    </template>
-    <template #aside-ads-after>
-      <span>aside-ads-after</span>
-    </template> -->
   </Layout>
 </template>
 
