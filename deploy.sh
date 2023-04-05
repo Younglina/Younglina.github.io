@@ -4,7 +4,7 @@
 set -e
 
 # 获取leetcode
-npm run ac
+# npm run ac
 
 # 生成静态文件
 npm run build
