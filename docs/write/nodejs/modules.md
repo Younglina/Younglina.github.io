@@ -147,3 +147,42 @@ server.listen(8080, 'localhost', () => {
   console.log('Server started!');
 });
 ```
+
+## express
+`Express`框架的原理主要基于`中间件（middleware）`的概念。  
+
+中间件是一个函数或一组函数，它可以访问`请求对象（req）`和`响应对象（res）`，并且可以以某种方式修改它们。  
+
+`Express`应用程序中的每个请求都会经过一系列中间件，这些中间件按照定义的顺序进行执行。每个中间件都可以选择继续处理请求，或者结束请求并返回响应。  
+
+`Express`框架提供了一种简单的方式来定义和使用中间件。通过`app.use()`方法，开发人员可以将一个或多个中间件添加到应用程序中。
+
+例如，以下代码将一个中间件函数添加到Express应用程序中：
+```javascript
+app.use(function(req, res, next) {
+  console.log('Time:', Date.now());
+  next();
+});
+```
+在这个例子中，中间件函数通过调用`next()`方法将请求传递给下一个中间件。如果在中间件函数中不调用`next()`，则请求将被中断，并且响应将不会被发送。
+
+当提供一个路径时，将匹配该路由中间件。如果之前有可以使用的中间件，则会执行前面的。
+
+如 'http://localhost:3000/home'
+```javascript
+app.use(function(req, res, next) {
+  console.log('middleware');
+  next();
+});
+app.use('/login', function(req, res, next) {
+  console.log('login');
+  next();
+});
+app.use('/home', function(req, res, next) {
+  console.log('home');
+  next();
+});
+
+// middleware
+// home
+```
