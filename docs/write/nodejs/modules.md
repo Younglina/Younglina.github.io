@@ -186,3 +186,91 @@ app.use('/home', function(req, res, next) {
 // middleware
 // home
 ```
+
+### 获取请求参数
+
+根据`Content-Type`的不同，有不同的获取方式。
+
+1. application/json
+2. 
+通过`express`的一个内置中间件函数`express.json()`用于解析JSON格式的请求体
+
+如`http://localhost:3000/home`发送了一个post请求，参数为`{ "username": "younglina", "password": "123" }`
+
+```javascript
+const express = require('express');
+const app = express();
+
+app.use(express.json());
+
+app.post('/login', (req, res) => {
+  const user = req.body;
+  console.log(user); // { username: 'younglina', password: '123' }
+  res.end()
+});
+
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
+```
+
+2. multipart/form-data
+
+包含文件上传的表单类型，可以使用`Multer`中间件
+
+```javascript
+const express = require('express')
+const multer = require('multer')
+const app = express()
+
+// 这样保存的文件没有对应的文件名和后缀
+const upload = multer({
+  dest: "./uploads" // 指定保存文件的路径
+})
+
+// file为提交时对应的参数名
+app.post('/upload', upload.single('file'), function(req, res, next) {
+  console.log(req.body);
+  next();
+});
+
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
+```
+
+可以通过配置选项来设置上传文件的名称和路径。
+
+Multer提供了两个配置选项来设置文件名和路径：
+
+destination：定义上传文件的存储路径。可以使用一个回调函数来动态设置存储路径，也可以使用一个静态路径。
+
+filename：定义上传文件的名称。可以使用一个回调函数来动态设置文件名称，也可以使用一个固定的文件名称。
+```javascript
+const express = require('express')
+const multer = require('multer')
+const app = express()
+
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, './uploads')
+  },
+  filename: function (req, file, cb) {
+    console.log(file)
+  // {
+  //   fieldname: 'file', 传参时的字段名
+  //   originalname: 'postman.png', 文件名
+  //   encoding: '7bit',
+  //   mimetype: 'image/png'
+  // }
+    cb(null, file.fieldname + '-' + Date.now() + '.' + file.originalname)
+  }
+})
+
+const upload = multer({storage})
+ 
+app.post('/upload', upload.single('file'), function(req, res, next) {
+  console.log(req.body);
+  next();
+});
+```
