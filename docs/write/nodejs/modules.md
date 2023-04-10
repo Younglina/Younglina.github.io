@@ -168,7 +168,7 @@ app.use(function(req, res, next) {
 
 当提供一个路径时，将匹配该路由中间件。如果之前有可以使用的中间件，则会执行前面的。
 
-如 'http://localhost:3000/home'
+如 `http://localhost:3000/home`
 ```javascript
 app.use(function(req, res, next) {
   console.log('middleware');
@@ -192,7 +192,7 @@ app.use('/home', function(req, res, next) {
 根据`Content-Type`的不同，有不同的获取方式。
 
 1. application/json
-2. 
+
 通过`express`的一个内置中间件函数`express.json()`用于解析JSON格式的请求体
 
 如`http://localhost:3000/home`发送了一个post请求，参数为`{ "username": "younglina", "password": "123" }`
@@ -241,11 +241,11 @@ app.listen(3000, () => {
 
 可以通过配置选项来设置上传文件的名称和路径。
 
-Multer提供了两个配置选项来设置文件名和路径：
+`Multer`提供了两个配置选项来设置文件名和路径：
 
-destination：定义上传文件的存储路径。可以使用一个回调函数来动态设置存储路径，也可以使用一个静态路径。
+- `destination`：定义上传文件的存储路径。可以使用一个回调函数来动态设置存储路径，也可以使用一个静态路径。
 
-filename：定义上传文件的名称。可以使用一个回调函数来动态设置文件名称，也可以使用一个固定的文件名称。
+- `filename`：定义上传文件的名称。可以使用一个回调函数来动态设置文件名称，也可以使用一个固定的文件名称。
 ```javascript
 const express = require('express')
 const multer = require('multer')
@@ -268,9 +268,72 @@ const storage = multer.diskStorage({
 })
 
 const upload = multer({storage})
- 
+
+// single 单个文件上传 会把文件对象放到req的file里
+// array 多个文件上传 会把文件对象放到req的files里
 app.post('/upload', upload.single('file'), function(req, res, next) {
-  console.log(req.body);
+  console.log(req.file);
+  next();
+}); 
+
+app.post('/uploads', upload.array('file'), function(req, res, next) {
+  console.log(req.files);
   next();
 });
+```
+
+### morgan日志中间件
+
+HTTP请求记录器中间件
+
+
+#### 下载
+
+```javascript
+npm i morgan
+```
+
+#### 语法
+官网： https://github.com/expressjs/morgan#options
+```
+morgan(format, options)
+```
+#### 使用
+将日志写到一个文件中
+```javascript
+const express = require('express')
+const fs = require('fs')
+const morgan = require('morgan')
+const path = require('path')
+
+const app = express()
+
+const accessLogStream = fs.createWriteStream(
+  path.join(__dirname, 'logs/access.log'), 
+  { flags: 'a' }
+)
+
+// combined 标准的Apache组合日志输出。
+app.use(morgan('combined', { stream: accessLogStream }))
+```
+
+使用[rotating-file-stream](https://github.com/iccicci/rotating-file-stream)模块，可以以给定的轮询方式保存到文件。
+```
+pnpm i rotating-file-stream
+```
+```javascript
+const express = require('express')
+const morgan = require('morgan')
+const path = require('path')
+const rfs = require('rotating-file-stream')
+
+const app = express()
+
+// 1d 每天新建一个文件，保存当天的请求日志
+const accessLogStream = rfs.createStream('logs/access.log', {
+  interval: '1d', // rotate daily
+  path: path.join(__dirname, 'log')
+})
+
+app.use(morgan('combined', { stream: accessLogStream }))
 ```
