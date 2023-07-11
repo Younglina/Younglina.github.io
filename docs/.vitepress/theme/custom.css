@@ -246,6 +246,10 @@ button:disabled {
 .VPHome {
   padding-bottom: 0 !important;
 }
+
+.vp-doc :not(pre) > code{
+  font-weight: bold;
+}
 /* 
  .heat-map {
   margin: 40px 0 !important;

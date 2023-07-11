@@ -1,17 +1,17 @@
 {
-  "hash": "2e79239b",
-  "browserHash": "0217c444",
+  "hash": "8808f558",
+  "browserHash": "13b00fe4",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/.pnpm/vue@3.2.47/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "3ecf4179",
+      "fileHash": "99fd50bd",
       "needsInterop": false
     },
     "gitalk": {
       "src": "../../../../node_modules/.pnpm/gitalk@1.8.0/node_modules/gitalk/dist/gitalk.js",
       "file": "gitalk.js",
-      "fileHash": "1d3b5aeb",
+      "fileHash": "f65eabf0",
       "needsInterop": true
     }
   },
