@@ -64,12 +64,21 @@ module.exports = {
             ],
         },
     ],
-    "/write/nodejs": [
+    // "/write/nodejs": [
+    //     {
+    //         title: "nodejs",
+    //         collapsable: false,
+    //         items: [
+    //             { title: "模块", text: "模块", link: "/write/nodejs/modules" },
+    //         ],
+    //     },
+    // ],
+    "/write/knowledgePoint": [
         {
-            title: "nodejs",
+            title: "javascript知识点",
             collapsable: false,
             items: [
-                { title: "模块", text: "模块", link: "/write/nodejs/modules" },
+                { title: "javscript", text: "javascript", link: "/write/knowledgePoint/javascript" },
             ],
         },
     ],

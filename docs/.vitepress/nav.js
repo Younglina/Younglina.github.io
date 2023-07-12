@@ -23,11 +23,17 @@ module.exports = [
         ],
     },
     {
-        text: "NodeJS",
+        text: "知识点",
         items: [
-            { text: "fs模块", link: "/write/nodejs/modules" },
+            { title: "javscript", text: "javascript", link: "/write/knowledgePoint/javascript" },
         ],
     },
+    // {
+    //     text: "NodeJS",
+    //     items: [
+    //         { text: "fs模块", link: "/write/nodejs/modules" },
+    //     ],
+    // },
     // {
     //     text: "源码阅读",
     //     items: [
