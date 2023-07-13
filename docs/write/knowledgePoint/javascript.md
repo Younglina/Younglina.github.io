@@ -7,7 +7,6 @@ categories:
 tags:
  - javascript
 ---
-1
 ## 数据类型
 ### 基本类型   
   - number(数字)：整数和浮点数  
@@ -128,3 +127,69 @@ console.log(myInstanceof(person, Object)); // true
 console.log(myInstanceof(person, Array)); // false
 
 ```
+
+## 原型
+
+JavaScript中所有的对象都有一个内置属性，称为它的`prototype（原型）`。它本身是一个对象，故原型对象也会有它自己的原型，逐渐构成了`原型链`。
+
+::: tip
+ 指向对象原型的属性并不是 prototype。它的名字不是标准的，但实际上所有浏览器都使用 `__proto__`。访问对象原型的标准方法是 Object.getPrototypeOf()。
+:::
+
+```javascript
+function Foo(name){
+  this.name = name
+}
+
+console.log(Foo.prototype)
+
+{
+  constructor: ƒ Foo(name)
+  [[Prototype]]: Object: { // 其实是__proto__
+    constructor: ƒ Object()
+    hasOwnProperty: ƒ hasOwnProperty()
+    isPrototypeOf: ƒ isPrototypeOf()
+    propertyIsEnumerable: ƒ propertyIsEnumerable()
+    toLocaleString: ƒ toLocaleString()
+    toString: ƒ toString()
+    valueOf: ƒ valueOf()
+  }
+}
+```
+
+
+## 原型链
+
+可以看出`Foo`的原型对象也有自己的原型，可以通过`__proto__`访问
+```javascript
+console.log(Foo.prototype.__proto__)
+
+{
+  constructor: ƒ Object()
+  hasOwnProperty: ƒ hasOwnProperty()
+  isPrototypeOf: ƒ isPrototypeOf()
+  propertyIsEnumerable: ƒ propertyIsEnumerable()
+  toLocaleString: ƒ toLocaleString()
+  toString: ƒ toString()
+  valueOf: ƒ valueOf()
+}
+```
+
+`__proto__`属性就是实例对象和它的构造函数`prototype`之间的一个链接，通过它一层一层的构建出`原型链`
+
+```javascript
+function Foo(name){
+  this.name = name
+}
+const bar = new Foo('younglina')
+
+console.log(bar.__proto__ === Foo.prototype) //true
+```
+
+**总结一下**：
+
+- 构造函数`Foo`有一个`prototype`属性，即原型对象`Foo.prototype`
+- 实例对象`bar`的`__proto__`指向构造函数`Foo`的原型对象`Foo.prototype`
+- `Foo.prototype.__proto`指向内置对象`Object`
+
+![](https://raw.githubusercontent.com/Younglina/images/master/proto.png)
