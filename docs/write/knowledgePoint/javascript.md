@@ -193,3 +193,54 @@ console.log(bar.__proto__ === Foo.prototype) //true
 - `Foo.prototype.__proto`指向内置对象`Object`
 
 ![](https://raw.githubusercontent.com/Younglina/images/master/proto.png)
+
+## 作用域
+
+作用域就是变量与函数的可访问范围，即作用域控制变量与函数的可见性和生命周期。
+
+```javascript
+function foo(){
+  var a = 1
+  let b = 2
+  {
+    let b = 3
+    var c = 4
+    let d = 5
+    console.log(a)
+    console.log(b)
+  }
+  console.log(b)
+  console.log(c)
+  console.log(d)
+}
+
+foo()
+```
+
+**第一步：javascript引擎会编译并创建执行上下文，此时的`foo`执行上下文：**
+
+![](https://raw.githubusercontent.com/Younglina/images/master/zyy1.png)
+
+**由图可知**：  
+
+- 函数内部通过`var`创建的变量，在编译阶段存放在变量环境
+- 通过`let`创建的变量，在编译阶段存放在词法环境
+- 在函数内部的作用域块，`let`声明的变量不会放到词法环境中
+
+**第二步：执行foo内部代码块**
+
+![](https://raw.githubusercontent.com/Younglina/images/master/zyy2.png)
+
+**由图可知**：  
+
+当进入函数内部的作用域块时，作用域块中通过`let`声明的变量，会被存放到词法环境的一个单独区域中，这个区域中的变量并不影响作用域块外部的变量，比如上面的两个b变量，它们都是独立存在的。
+
+其实在词法环境内部，维护了一个栈型结构，栈底是函数最外层的变量，当进入函数内部作用域块时，就把这块的作用域块内部的变量入栈。如上图词法环境中两个单独的作用域块。
+
+当执行到`console.log(a)`时，就需要在词法环境和变量环境中查找`变量a`的值了，查找方式为：从词法环境的栈顶向下查询，如果找到则返回给js引擎，如果没有，就在变量环境中继续查找。
+
+![](https://raw.githubusercontent.com/Younglina/images/master/zyy3.png)
+
+当作用域块执行结束之后，其内部定义的变量就会从词法环境的栈中弹出。
+
+![](https://raw.githubusercontent.com/Younglina/images/master/zyy4.png)
