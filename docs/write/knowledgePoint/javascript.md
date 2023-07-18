@@ -244,3 +244,71 @@ foo()
 当作用域块执行结束之后，其内部定义的变量就会从词法环境的栈中弹出。
 
 ![](https://raw.githubusercontent.com/Younglina/images/master/zyy4.png)
+
+## 作用域链
+
+通过下面代码来分析作用域链
+
+```javascript
+function bar() {
+  console.log(name)
+}
+function foo() {
+  var name = "foo name"
+  bar()
+  console.log(name)
+}
+var name = "global name"
+foo()
+```
+
+当执行到`bar`时，此时调用栈为
+
+![](https://raw.githubusercontent.com/Younglina/images/master/zyy3.png)
+
+在每个执行上下文变量环境中，都包含一个外部应用，用来指向外部的执行上下文，称为`outer`。  
+通过上面的调用栈可以看出，`foo`和`bar`的`outer`都是指向全局执行上下文的，所以当两个函数内部有使用外部变量时，应该去全局上下文中查找。这个查找的过程链就称为`作用域链`。  
+
+::: tip  
+Q: 为什么`foo`函数内调用`bar`，`bar`的外部引用是全局执行上下文，而不是`foo`的执行上下文？  
+A: 因为在js中，作用域链是由`词法作用域`决定的  
+:::
+
+## 词法作用域
+
+词法作用域是指函数作用域是由代码中声明的位置决定的，是在编译时就决定了的，与函数在哪里调用无关
+
+## 块级作用域中变量的查找
+
+通过一个相对复杂的执行过程总结一下作用域。
+
+```javascript
+function bar() {
+  var name = "bar name"
+  let value1 = 100
+  if (1) {
+    let name = "bar block name"
+    console.log(value)
+  }
+}
+
+function foo() {
+  var name = "foo name"
+  let value = 2
+
+  {
+    let value = 3
+    bar()
+  }
+
+}
+var name = "global name"
+let agg = 10
+let value = 1
+foo()
+```
+
+调用栈图解：
+![](https://raw.githubusercontent.com/Younglina/images/master/zyy4.png)
+
+分析：当执行到`console`时，先在其作用域的词法环境中，从上往下查找，没找到再去变量环境中找，因为`bar`执行上下文的外部引用指向全局作用域，所以最后到全局作用域的词法环境中找。
