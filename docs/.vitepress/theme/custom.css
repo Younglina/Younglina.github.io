@@ -1,3 +1,16 @@
+/* For Mobile */
+@media screen and (max-width: 600px) {
+  .docs.info-wrapper {
+    display: none; /* 在小屏幕上隐藏 */
+  }
+  .name {
+    font-size: 30px !important;
+  }
+  .tagline {
+    font-size: 20px !important; 
+  }
+}
+
 
 @media (min-width: 960px) {
   .image-src {
